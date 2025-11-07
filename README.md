@@ -25,5 +25,5 @@ python convert_checkpoint.py /PATH/TO/CHECKPOINT
 ```
 4. (Optional) To specify a custom output path, provide it as the second argument:
 ```bash
-python convert_checkpoint.py ./best_dense_unet.pth ./converted_model.pth
+python convert_checkpoint.py /PATH/TO/CHECKPOINT /PATH/TO/SAVE
 ```
