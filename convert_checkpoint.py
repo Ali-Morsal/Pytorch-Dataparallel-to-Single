@@ -47,6 +47,13 @@ def remove_dataparallel_prefix(checkpoint_path, output_path=None):
     print(f"Converted checkpoint saved to: {output_path}")
 
 
-# ====== Write Checkpoint Path here ======
-checkpoint_path = "./best_dense_unet.pth"
-remove_dataparallel_prefix(checkpoint_path)
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("❌ Usage: python convert_checkpoint.py /PATH/TO/CHECKPOINT [OUTPUT_PATH]")
+        sys.exit(1)
+
+    checkpoint_path = sys.argv[1]
+    output_path = sys.argv[2] if len(sys.argv) > 2 else None
+
+    remove_dataparallel_prefix(checkpoint_path, output_path)
+
