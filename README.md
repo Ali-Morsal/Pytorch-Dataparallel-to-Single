@@ -21,4 +21,9 @@ and saves a new checkpoint that works on one GPU.
 3. Run the script:
 
 ```bash
-python convert_checkpoint.py
+python convert_checkpoint.py /PATH/TO/CHECKPOINT
+```
+4. (Optional) To specify a custom output path, provide it as the second argument:
+```bash
+python convert_checkpoint.py ./best_dense_unet.pth ./converted_model.pth
+```
